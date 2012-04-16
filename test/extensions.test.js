@@ -1,9 +1,10 @@
 var ffmpeg = require('../lib/fluent-ffmpeg'),
+  gcd = require('../lib/helpers').gcd;
   testCase = require('nodeunit').testCase;
 
 module.exports = testCase({
 	testGcdYieldsGreatestCommonDivider: function(test) {
-    test.ok(this.gcd(1024, 768) == 256);
+    test.ok(gcd(1024, 768) == 256);
     test.done();
   },
   testToAspectRatio: function(test) {
